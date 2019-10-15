@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.5"/>
+      </geometry>
+	<origin rpy="0 0 0" xyz="0 0 0.5"/>
+    </visual>
+  </link>
+
+<!--ourleft visuial joint-->
+<link name="left_bo2la">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+    </visual>
+  </link>
+
+<joint name="base_to_left_bo2la" type="fixed">
+<origin rpy="0 0 0" xyz="0 0.6 0.5"/>
+    <parent link="base_link"/>
+    <child link="left_bo2la"/>
+  </joint>
+
+
+
+<!--our right visuial joint-->
+<link name="right_bo2la">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+    </visual>
+  </link>
+
+<joint name="base_to_right_bo2la" type="fixed">
+<origin rpy="0 0 0" xyz="0 -0.6 0.5"/>
+    <parent link="base_link"/>
+    <child link="right_bo2la"/>
+  </joint>
+
+<!--our front visuial joint-->
+<link name="front_bo2la">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+    </visual>
+  </link>
+
+<joint name="base_to_front_bo2la" type="fixed">
+<origin rpy="0 0 0" xyz="0.6 0 0.5"/>
+    <parent link="base_link"/>
+    <child link="front_bo2la"/>
+  </joint>
+<!--our right visuial joint-->
+<link name="back_bo2la">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+    </visual>
+  </link>
+
+<joint name="base_to_back_bo2la" type="fixed">
+<origin rpy="0 0 0" xyz="-0.6 0 0.5"/>
+    <parent link="base_link"/>
+    <child link="back_bo2la"/>
+  </joint>
+
+
+</robot>
+
