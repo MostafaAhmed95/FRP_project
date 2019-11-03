@@ -30,13 +30,15 @@
       <geometry>
         <box size="0.1 0.6 0.3" />
       </geometry>
+      <origin rpy="0 0 0" xyz="0 0.3 0"/>	
     </visual>
   </link>
 
 <joint name="left_bo2la_to_left_leg" type="continuous">
-<origin rpy="0 0 0" xyz="0 0.4 0"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="left_bo2la"/>
     <child link="left_leg"/>
+    <axis xyz="0 0 1"/>
   </joint>
 
 <!--our left_bo2la_2-->
@@ -50,7 +52,7 @@
   </link>
 
 <joint name="left_leg_to_left_bo2la_2" type="fixed">
-<origin rpy="0 0 0" xyz="0 0.4 0"/>
+<origin rpy="0 0 0" xyz="0 0.6 0"/>
     <parent link="left_leg"/>
     <child link="left_bo2la_2"/>
   </joint>
@@ -61,12 +63,12 @@
       <geometry>
         <box size="0.1 0.4 0.1" />
       </geometry>
-      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
     </visual>
   </link>
 
 <joint name="left_bo2la_2_to_left_leg" type="continuous">
-<origin rpy="0 0 0" xyz="0 0 -0.3"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="left_bo2la_2"/>
     <child link="left_leg_2"/>
   </joint>
@@ -93,13 +95,15 @@
       <geometry>
         <box size="0.1 0.6 0.3" />
       </geometry>
+    <origin rpy="0 0 0" xyz="0 -0.3 0"/>
     </visual>
   </link>
 
 <joint name="right_bo2la_to_right_leg" type="continuous">
-<origin rpy="0 0 0" xyz="0 -0.4 0"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="right_bo2la"/>
     <child link="right_leg"/>
+    <axis xyz="0 0 1"/>
   </joint>
 
 <!--our right_bo2la_2-->
@@ -113,7 +117,7 @@
   </link>
 
 <joint name="right_leg_to_right_bo2la_2" type="fixed">
-<origin rpy="0 0 0" xyz="0 -0.4 0"/>
+<origin rpy="0 0 0" xyz="0 -0.6 0"/>
     <parent link="right_leg"/>
     <child link="right_bo2la_2"/>
   </joint>
@@ -124,12 +128,12 @@
       <geometry>
         <box size="0.1 0.4 0.1" />
       </geometry>
-      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
     </visual>
   </link>
 
 <joint name="right_bo2la_2_to_right_leg_2" type="continuous">
-<origin rpy="0 0 0" xyz="0 0 -0.3"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="right_bo2la_2"/>
     <child link="right_leg_2"/>
   </joint>
@@ -156,14 +160,15 @@
       <geometry>
         <box size="0.1 0.6 0.3" />
       </geometry>
-      <origin rpy="0 0 1.57075" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57075" xyz="0.3 0 0"/>
     </visual>
   </link>
 
 <joint name="front_bo2la_to_front_leg" type="continuous">
-<origin rpy="0 0 0" xyz="0.4 0 0"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="front_bo2la"/>
     <child link="front_leg"/>
+    <axis xyz="0 0 1"/>
   </joint>
 
 <!--our front_bo2la_2-->
@@ -177,7 +182,7 @@
   </link>
 
 <joint name="front_leg_to_front_bo2la_2" type="fixed">
-<origin rpy="0 0 0" xyz="0.4 0 0"/>
+<origin rpy="0 0 0" xyz="0.6 0 0"/>
     <parent link="front_leg"/>
     <child link="front_bo2la_2"/>
   </joint>
@@ -188,14 +193,16 @@
       <geometry>
         <box size="0.1 0.4 0.1" />
       </geometry>
-      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
     </visual>
   </link>
 
 <joint name="front_bo2la_2_to_front_leg_2" type="continuous">
-<origin rpy="0 0 0" xyz="0 0 -0.3"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="front_bo2la_2"/>
     <child link="front_leg_2"/>
+    <axis xyz="0 1 0"/>
+	
   </joint>
 
 
@@ -212,6 +219,57 @@
 <origin rpy="0 0 0" xyz="-0.6 0 0.5"/>
     <parent link="base_link"/>
     <child link="back_bo2la"/>
+  </joint>
+
+<!--our back leg-->
+<link name="back_leg">
+    <visual>
+      <geometry>
+        <box size="0.1 0.6 0.3" />
+      </geometry>
+      <origin rpy="0 0 1.57075" xyz="-0.3 0 0"/>
+    </visual>
+  </link>
+
+<joint name="back_bo2la_to_back_leg" type="continuous">
+<origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="back_bo2la"/>
+    <child link="back_leg"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+
+<link name="back_bo2la_2">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+<joint name="back_leg_to_back_bo2la_2" type="fixed">
+<origin rpy="0 0 0" xyz="-0.6 0 0"/>
+    <parent link="back_leg"/>
+    <child link="back_bo2la_2"/>
+  </joint>
+
+
+<link name="back_leg_2">
+    <visual>
+      <geometry>
+        <box size="0.1 0.4 0.1" />
+      </geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
+    </visual>
+  </link>
+
+<joint name="back_bo2la_2_to_back_leg_2" type="continuous">
+<origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="back_bo2la_2"/>
+    <child link="back_leg_2"/>
+    <axis xyz="0 1 0"/>
+	
   </joint>
 
 
