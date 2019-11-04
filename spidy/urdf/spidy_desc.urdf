@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot name="myfirst">
+<!-- our circular base -->
   <link name="base_link">
     <visual>
       <geometry>
@@ -7,7 +8,17 @@
       </geometry>
 	<origin rpy="0 0 0" xyz="0 0 0.5"/>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
   </link>
+
 
 <!--ourleft visuial joint-->
 <link name="left_bo2la">
@@ -16,6 +27,15 @@
         <cylinder length="0.3" radius="0.1"/>
       </geometry>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="base_to_left_bo2la" type="fixed">
@@ -30,8 +50,17 @@
       <geometry>
         <box size="0.1 0.6 0.3" />
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0.3 0"/>	
+      <origin rpy="0 0 0" xyz="0 0.3 0"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.6 0.3"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="left_bo2la_to_left_leg" type="continuous">
@@ -49,6 +78,15 @@
       </geometry>
       <origin rpy="0 1.57075 0" xyz="0 0 0"/>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="left_leg_to_left_bo2la_2" type="fixed">
@@ -65,6 +103,15 @@
       </geometry>
       <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.4 0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="left_bo2la_2_to_left_leg" type="continuous">
@@ -81,6 +128,15 @@
         <cylinder length="0.3" radius="0.1"/>
       </geometry>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="base_to_right_bo2la" type="fixed">
@@ -97,6 +153,15 @@
       </geometry>
     <origin rpy="0 0 0" xyz="0 -0.3 0"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.6 0.3"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="right_bo2la_to_right_leg" type="continuous">
@@ -114,6 +179,15 @@
       </geometry>
       <origin rpy="0 1.57075 0" xyz="0 0 0"/>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="right_leg_to_right_bo2la_2" type="fixed">
@@ -130,6 +204,15 @@
       </geometry>
       <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.4 0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="right_bo2la_2_to_right_leg_2" type="continuous">
@@ -146,6 +229,15 @@
         <cylinder length="0.3" radius="0.1"/>
       </geometry>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="base_to_front_bo2la" type="fixed">
@@ -162,6 +254,15 @@
       </geometry>
       <origin rpy="0 0 1.57075" xyz="0.3 0 0"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.6 0.3"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="front_bo2la_to_front_leg" type="continuous">
@@ -179,6 +280,15 @@
       </geometry>
       <origin rpy="1.57075 0 0" xyz="0 0 0"/>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="front_leg_to_front_bo2la_2" type="fixed">
@@ -195,6 +305,15 @@
       </geometry>
       <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.4 0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="front_bo2la_2_to_front_leg_2" type="continuous">
@@ -202,7 +321,7 @@
     <parent link="front_bo2la_2"/>
     <child link="front_leg_2"/>
     <axis xyz="0 1 0"/>
-	
+
   </joint>
 
 
@@ -213,6 +332,15 @@
         <cylinder length="0.3" radius="0.1"/>
       </geometry>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="base_to_back_bo2la" type="fixed">
@@ -229,6 +357,15 @@
       </geometry>
       <origin rpy="0 0 1.57075" xyz="-0.3 0 0"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.6 0.3"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="back_bo2la_to_back_leg" type="continuous">
@@ -238,7 +375,7 @@
     <axis xyz="0 0 1"/>
   </joint>
 
-
+<!--our back_bo2la_2-->
 <link name="back_bo2la_2">
     <visual>
       <geometry>
@@ -246,6 +383,15 @@
       </geometry>
       <origin rpy="1.57075 0 0" xyz="0 0 0"/>
     </visual>
+<collision>
+      <geometry>
+        <cylinder length="0.3" radius="0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="back_leg_to_back_bo2la_2" type="fixed">
@@ -254,7 +400,7 @@
     <child link="back_bo2la_2"/>
   </joint>
 
-
+<!--back_leg_2-->
 <link name="back_leg_2">
     <visual>
       <geometry>
@@ -262,6 +408,15 @@
       </geometry>
       <origin rpy="1.57075 0 0" xyz="0 0 -0.2"/>
     </visual>
+<collision>
+      <geometry>
+        <box size="0.1 0.4 0.1"/>
+      </geometry>
+</collision>
+<inertial>
+      <mass value="10"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+</inertial>
   </link>
 
 <joint name="back_bo2la_2_to_back_leg_2" type="continuous">
@@ -269,9 +424,59 @@
     <parent link="back_bo2la_2"/>
     <child link="back_leg_2"/>
     <axis xyz="0 1 0"/>
-	
+
   </joint>
 
+<gazebo reference="base_link">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="left_bo2la">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="right_bo2la">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="front_bo2la">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="back_bo2la">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="front_leg">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="back_leg">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="left_leg">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="right_leg">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="front_bo2la_2">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="back_bo2la_2">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="left_bo2la_2">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="right_bo2la_2">
+  <material>Gazebo/Blue</material>
+</gazebo>
+<gazebo reference="front_leg_2">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="back_leg_2">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="left_leg_2">
+  <material>Gazebo/Red</material>
+</gazebo>
+<gazebo reference="right_leg_2">
+  <material>Gazebo/Red</material>
+</gazebo>
 
 </robot>
-
