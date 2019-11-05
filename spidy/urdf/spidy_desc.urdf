@@ -6,7 +6,7 @@
       <geometry>
         <cylinder length="0.3" radius="0.5"/>
       </geometry>
-	<origin rpy="0 0 0" xyz="0 0 0.5"/>
+	   <origin rpy="0 0 0" xyz="0 0 0.5"/>
     </visual>
     <collision>
       <geometry>
@@ -17,7 +17,7 @@
       <mass value="10"/>
       <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
     </inertial>
-  </link>
+</link>
 
 
 <!--ourleft visuial joint-->
@@ -478,5 +478,21 @@
 <gazebo reference="right_leg_2">
   <material>Gazebo/Red</material>
 </gazebo>
+<transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_bo2la_to_left_leg">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo>
+   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+     <robotNamespace>/rrbot</robotNamespace>
+   </plugin>
+ </gazebo>
 
 </robot>
