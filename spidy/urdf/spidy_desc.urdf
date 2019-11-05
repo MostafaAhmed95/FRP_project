@@ -114,7 +114,7 @@
 </inertial>
   </link>
 
-<joint name="left_bo2la_2_to_left_leg" type="continuous">
+<joint name="left_bo2la_2_to_left_leg_2" type="continuous">
 <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="left_bo2la_2"/>
     <child link="left_leg_2"/>
@@ -489,6 +489,7 @@
     </actuator>
   </transmission>
 
+  
   <gazebo>
    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
      <robotNamespace>/rrbot</robotNamespace>
