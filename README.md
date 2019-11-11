@@ -18,3 +18,5 @@ python simple_pub.py
 
 here is the video showing the steps and robot movment<br/>
 https://www.youtube.com/watch?v=l6ctoMqnkRE&feature=youtu.be
+
+rosrun image_view image_view image:=/mybot/camera1/image_raw<br/>
