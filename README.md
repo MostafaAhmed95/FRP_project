@@ -22,4 +22,7 @@ https://www.youtube.com/watch?v=l6ctoMqnkRE&feature=youtu.be
 after aproving the new request just type<br/>
 roslaunch spidy all_launch.launch 
 
+here is the video showing the launch after adding the camera<br/>
+https://youtu.be/r3qwlFgRL_4
+
 
