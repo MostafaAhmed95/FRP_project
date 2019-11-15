@@ -1,0 +1,3 @@
+<launch>
+      <test test-name="test_code" pkg="spidy" type="test_try.py" />
+</launch>
