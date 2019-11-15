@@ -1,0 +1,6 @@
+<launch>
+      <node pkg="spidy" name="move" type="simple_pub.py"/>
+      <node pkg="spidy" name="sub" type="simple_sub.py"/>
+      <test test-name="test_code" pkg="spidy" type="test_try.py" />
+      <test test-name="int_test_code" pkg="spidy" type="int_test.py"/>
+</launch>
