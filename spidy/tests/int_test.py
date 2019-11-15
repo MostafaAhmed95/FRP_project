@@ -5,8 +5,6 @@ import rostest
 import rospy
 from std_msgs.msg import Float64
 
-
-
 bat=0
 class MyTestCase(unittest.TestCase):
 
@@ -16,9 +14,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_whatever(self):
         rospy.init_node('listener', anonymous=True)
-
-        rospy.Subscriber("/rrbot/joint1_position_controller/command", Float64, self.callback)
-        self.assertTrue(bat<5)
+        rospy.Subscriber("chatter", Float64, self.callback)
+        self.assertTrue(bat<100)
 
 
 if __name__ == "__main__":
