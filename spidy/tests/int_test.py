@@ -15,7 +15,8 @@ class MyTestCase(unittest.TestCase):
     def test_whatever(self):
         rospy.init_node('listener', anonymous=True)
         rospy.Subscriber("chatter", Float64, self.callback)
-        self.assertTrue(bat<100)
+        #give false if our publisher has been publishing for long 
+        self.assertTrue(bat<1000)
 
 
 if __name__ == "__main__":

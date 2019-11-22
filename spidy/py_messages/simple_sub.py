@@ -3,6 +3,7 @@ import rospy
 from std_msgs.msg import Float64
 
 def callback(data):
+    #muliply the value by two then test it in the test file 
     pub.publish((data.data)*2)
     rospy.loginfo(data.data)
 
