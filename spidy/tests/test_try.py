@@ -15,6 +15,7 @@ class MyTestCase(unittest.TestCase):
         pub_value=data.data
 
     def callback_state(self,data)
+        #get the state of the robot
         rec_value=data.set_point
 
     def test_whatever(self):
@@ -22,6 +23,7 @@ class MyTestCase(unittest.TestCase):
 
         rospy.Subscriber("/rrbot/joint1_position_controller/command", Float64, self.callback)
         rospy.Subscriber("/rrbot/joint1_position_controller/state", Float64, self.callback_state)
+        #compare them  to see if my command applied or not
         self.assertTrue(pub_value==rec_value)
 
 
