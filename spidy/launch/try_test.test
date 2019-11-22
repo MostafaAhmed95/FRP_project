@@ -1,0 +1,4 @@
+<launch>
+      <test test-name="test_code" pkg="spidy" type="test_try.py" />
+      <test test-name="int_test_code" pkg="spidy" type="int_test.py"/>
+</launch>
