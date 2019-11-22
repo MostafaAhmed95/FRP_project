@@ -11,14 +11,18 @@ bat=0
 class MyTestCase(unittest.TestCase):
 
     def callback(self, data):
-        bat=data.data
+        #get that from the topic that publish joint state
+        pub_value=data.data
 
+    def callback_state(self,data)
+        rec_value=data.set_point
 
     def test_whatever(self):
         rospy.init_node('listener', anonymous=True)
 
         rospy.Subscriber("/rrbot/joint1_position_controller/command", Float64, self.callback)
-        self.assertTrue(bat<5)
+        rospy.Subscriber("/rrbot/joint1_position_controller/state", Float64, self.callback_state)
+        self.assertTrue(pub_value==rec_value)
 
 
 if __name__ == "__main__":
