@@ -137,6 +137,6 @@ script:
   - source devel/setup.bash
   #- catkin_make run_tests && catkin_test_results
   #- pwd
+  - rostest spidy one_for_all.test
   #- python src/FRP_project/spidy/tests/test_try.py
   #- python src/FRP_project/spidy/tests/int_test.py
-  rostest spidy one_for_all.test
