@@ -7,7 +7,6 @@ python:
 # command to install dependencies
 install:
   - sudo apt-get install python-rostest
-  - sudo apt-get install python3-rostest
 
 # command to run tests
 script:
