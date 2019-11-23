@@ -6,5 +6,5 @@ python:
   - "3.6"
 # command to run tests
 script:
-  - python /spidy/tests/test_try.py
-  - python /spidy/tests/int_test.py 
+  - python spidy/tests/test_try.py
+  - python spidy/tests/int_test.py 
