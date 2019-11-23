@@ -136,6 +136,6 @@ script:
   # Run the tests, ensuring the path is set correctly.
   - source devel/setup.bash
   #- catkin_make run_tests && catkin_test_results
-  - pwd
-  - python src/spidy/tests/test_try.py
-  - python src/spidy/tests/int_test.py
+  #- pwd
+  - python src/FRP_project/spidy/tests/test_try.py
+  - python src/FRP_project/spidy/tests/int_test.py
