@@ -6,8 +6,8 @@ python:
   - "3.6"
 # command to install dependencies
 install:
-  - pip install -r requirements.txt
-  - pip install .
+  - sudo apt-get install python-rostest
+  - sudo apt-get install python3-rostest
 
 # command to run tests
 script:
