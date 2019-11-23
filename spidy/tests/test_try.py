@@ -8,6 +8,8 @@ from std_msgs.msg import Float64
 
 
 bat=0
+pub_value=0
+rec_value=0
 class MyTestCase(unittest.TestCase):
 
     def callback(self, data):
