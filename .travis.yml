@@ -4,7 +4,12 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install .s
+
 # command to run tests
 script:
   - python spidy/tests/test_try.py
-  - python spidy/tests/int_test.py 
+  - python spidy/tests/int_test.py
