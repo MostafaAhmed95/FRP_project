@@ -14,7 +14,7 @@ class MyTestCase(unittest.TestCase):
         #get that from the topic that publish joint state
         pub_value=data.data
 
-    def callback_state(self,data)
+    def callback_state(self,data):
         #get the state of the robot
         rec_value=data.set_point
 
