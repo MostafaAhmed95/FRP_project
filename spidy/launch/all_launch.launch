@@ -1,0 +1,8 @@
+<launch>
+
+<include file="$(find spidy)/launch/launch_gaz.launch" />
+<include file="$(find spidy)/launch/rrbot_control.launch" />
+<node pkg="spidy" name="move" type="simple_pub.py"/>
+<node pkg="spidy" name="capy" type="cap.py"/>
+
+</launch>
