@@ -20,7 +20,7 @@ class image_converter:
   def callback(self,data):
     try:
       cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
-      cv2.imwrite("/home/mostafa/Documents/my_ws/src/spidy/saved_images/image"+str(self.counter)+'.png',cv_image)
+      cv2.imwrite("/home/image"+str(self.counter)+'.png',cv_image)
       self.counter+=1
       rospy.sleep(1.)
     except CvBridgeError as e:
