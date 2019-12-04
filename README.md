@@ -1,4 +1,7 @@
 # FRP_project
+
+[![Build Status](https://travis-ci.com/MostafaAhmed95/FRP_project.svg?branch=tra_ci)](https://travis-ci.com/MostafaAhmed95/FRP_project)
+
 just copy the spidy package into your work space <br/>
 don't forget to catkin_make your work space after
 

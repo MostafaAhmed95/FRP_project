@@ -8,13 +8,15 @@ from std_msgs.msg import Float64
 
 
 bat=0
+pub_value=0
+rec_value=0
 class MyTestCase(unittest.TestCase):
 
     def callback(self, data):
         #get that from the topic that publish joint state
         pub_value=data.data
 
-    def callback_state(self,data)
+    def callback_state(self,data):
         #get the state of the robot
         rec_value=data.set_point
 
